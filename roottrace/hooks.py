@@ -26,7 +26,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/roottrace/css/roottrace.css"
-# app_include_js = "/assets/roottrace/js/roottrace.js"
+app_include_js = "/assets/roottrace/js/diagnosis.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/roottrace/css/roottrace.css"
@@ -43,7 +43,9 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+# Adds an "Analyze with RootTrace" button to the standard Error Log form.
+# Injected via hook -- Frappe core is not modified; Error Log works with RootTrace off.
+doctype_js = {"Error Log": "public/js/error_log.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}

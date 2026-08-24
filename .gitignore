@@ -1,7 +1,22 @@
-.DS_Store
+# Python
 *.pyc
-*.egg-info
+__pycache__/
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+
+# Frappe / bench build artifacts
+node_modules/
+roottrace/public/dist/
+*.log
+
+# Editor / OS
+.DS_Store
 *.swp
 tags
-node_modules
-__pycache__
+.idea/
+.vscode/
+.venv/
+env/

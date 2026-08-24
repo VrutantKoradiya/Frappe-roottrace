@@ -1,0 +1,266 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DS-{#####}",
+ "creation": "2026-08-12 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_section",
+  "title",
+  "status",
+  "source",
+  "column_break_basic",
+  "error_log",
+  "site",
+  "frappe_version",
+  "erpnext_version",
+  "error_section",
+  "error_type",
+  "error_message",
+  "column_break_error",
+  "application",
+  "application_type",
+  "failure_section",
+  "file_path",
+  "line_number",
+  "function_name",
+  "column_break_failure",
+  "failure_location",
+  "failure_code_section",
+  "failure_code",
+  "root_cause_section",
+  "root_cause",
+  "root_cause_location",
+  "diagnosis",
+  "trace_section",
+  "original_traceback",
+  "call_chain",
+  "related_frames",
+  "suggestions_section",
+  "suggestions",
+  "confidence_section",
+  "confidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "default": "New",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "New\nAnalyzing\nDiagnosed\nResolved"
+  },
+  {
+   "default": "Manual",
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Source",
+   "options": "Error Log\nManual"
+  },
+  {
+   "fieldname": "column_break_basic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.source==='Error Log'",
+   "fieldname": "error_log",
+   "fieldtype": "Link",
+   "label": "Error Log",
+   "options": "Error Log"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Data",
+   "label": "Site",
+   "read_only": 1
+  },
+  {
+   "fieldname": "frappe_version",
+   "fieldtype": "Data",
+   "label": "Frappe Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "erpnext_version",
+   "fieldtype": "Data",
+   "label": "ERPNext Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_section",
+   "fieldtype": "Section Break",
+   "label": "Error Information"
+  },
+  {
+   "fieldname": "error_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Error Type"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message"
+  },
+  {
+   "fieldname": "column_break_error",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "application",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Application"
+  },
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Select",
+   "label": "Application Type",
+   "options": "Frappe\nERPNext\nCustom App\nThird Party App\nUnknown"
+  },
+  {
+   "fieldname": "failure_section",
+   "fieldtype": "Section Break",
+   "label": "Failure Location"
+  },
+  {
+   "fieldname": "file_path",
+   "fieldtype": "Data",
+   "label": "File Path"
+  },
+  {
+   "fieldname": "line_number",
+   "fieldtype": "Int",
+   "label": "Line Number"
+  },
+  {
+   "fieldname": "function_name",
+   "fieldtype": "Data",
+   "label": "Function Name"
+  },
+  {
+   "fieldname": "column_break_failure",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "failure_location",
+   "fieldtype": "Small Text",
+   "label": "Failure Location"
+  },
+  {
+   "fieldname": "failure_code_section",
+   "fieldtype": "Section Break",
+   "label": "Failing Code"
+  },
+  {
+   "description": "Source context around the failure line (from the current bench, or the line embedded in the traceback).",
+   "fieldname": "failure_code",
+   "fieldtype": "Code",
+   "label": "Failure Code"
+  },
+  {
+   "fieldname": "root_cause_section",
+   "fieldtype": "Section Break",
+   "label": "Root Cause"
+  },
+  {
+   "fieldname": "root_cause",
+   "fieldtype": "Text Editor",
+   "label": "Root Cause"
+  },
+  {
+   "fieldname": "root_cause_location",
+   "fieldtype": "Small Text",
+   "label": "Root Cause Location"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Text Editor",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "trace_section",
+   "fieldtype": "Section Break",
+   "label": "Trace"
+  },
+  {
+   "description": "Stored exactly as supplied.",
+   "fieldname": "original_traceback",
+   "fieldtype": "Code",
+   "label": "Original Traceback"
+  },
+  {
+   "fieldname": "call_chain",
+   "fieldtype": "Text Editor",
+   "label": "Call Chain"
+  },
+  {
+   "fieldname": "related_frames",
+   "fieldtype": "Text Editor",
+   "label": "Related Frames"
+  },
+  {
+   "fieldname": "suggestions_section",
+   "fieldtype": "Section Break",
+   "label": "Suggestions"
+  },
+  {
+   "fieldname": "suggestions",
+   "fieldtype": "Text Editor",
+   "label": "Suggestions"
+  },
+  {
+   "fieldname": "confidence_section",
+   "fieldtype": "Section Break",
+   "label": "Confidence"
+  },
+  {
+   "fieldname": "confidence",
+   "fieldtype": "Select",
+   "label": "Confidence",
+   "options": "\nHigh\nMedium\nLow"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-12 12:00:00",
+ "module": "RootTrace",
+ "name": "Debug Session",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}

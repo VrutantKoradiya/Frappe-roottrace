@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2026-08-12 00:00:00",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-08-12 00:00:00",
+ "module": "RootTrace",
+ "name": "roottrace",
+ "owner": "Administrator",
+ "page_name": "roottrace",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "standard": "Yes",
+ "title": "RootTrace"
+}
