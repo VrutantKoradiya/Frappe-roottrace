@@ -10,7 +10,8 @@ call chain, likely root cause, what to check, and a confidence level.
 ## Install
 
 ```bash
-bench get-app https://github.com/<your-github-username>/roottrace
+# repo is "Frappe-roottrace"; the app inside is "roottrace" -- pass the name explicitly
+bench get-app roottrace https://github.com/VrutantKoradiya/Frappe-roottrace.git
 bench --site <your-site> install-app roottrace
 ```
 
